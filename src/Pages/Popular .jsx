@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import Card from '../Components/Card';
+
 
 
 class Popular extends Component {
@@ -17,9 +17,13 @@ class Popular extends Component {
             .then(result => result.json())
             .then(res => {
                 this.setState({ movies: res.results })
-                console.log('fetch', res.results)
+                // console.log('fetch', res.results)
             });
     }
+
+
+   
+
     render() {
         console.log('movies', this.state.movies)
         // const popularMovies = this.state.movies.filter((movie)=>{
@@ -29,7 +33,7 @@ class Popular extends Component {
         return (
             <div className='containerPopular'>
                 {this.state.movies.map(movie => {
-                    return <Card poster_path={movie.poster_path} title={movie.title} release_date={movie.release_date} overview={movie.overview} />
+                    return <Card handleClickFavorite={this.handleClickFavorite} poster_path={movie.poster_path} title={movie.title} release_date={movie.release_date} overview={movie.overview} />
                 })}
             </div>
         );

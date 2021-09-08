@@ -42,7 +42,7 @@ a {
   content:'';
   width: 86%;
   height: 5px;
-  background-color: rgb(180, 180, 180);
+  background-color: rgb(81, 214, 255);
   position: absolute;
   bottom: 1px;
   left: 50%;
@@ -71,6 +71,7 @@ a {
   margin: 20px;
   box-sizing: border-box;
   box-shadow: 2px 2px 3px 1px #c0c0c0;
+  transition: 1s;
 
 }
 .containerCard:hover {

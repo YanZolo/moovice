@@ -9,7 +9,7 @@ class Card extends Component {
         return (
             <>
 
-                <div className='containerCard'>
+                <div className='containerCard' onClick={this.props.handleClickFavorite}>
                     <img className='imgCard' src={`https://image.tmdb.org/t/p/w300/${this.props.poster_path}`} alt={this.props.title} />
                     <h2 className='titleCard'>{this.props.title}</h2>
                     <p className='releaseCard'>{this.props.release_date}</p>
