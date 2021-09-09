@@ -14,10 +14,11 @@ class Popular extends Component {
     componentDidMount() {
         fetch('https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=8c2c5c205a0ac5bb229fe92084e87cf4')
 
-            .then(result => result.json())
+            .then(result =>                 
+                result.json())
             .then(res => {
                 this.setState({ movies: res.results })
-                // console.log('fetch', res.results)
+               
             });
     }
 
