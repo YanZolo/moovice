@@ -1,6 +1,9 @@
 body {
   box-sizing: border-box;
 }
+button{
+  padding:10px ;
+}
 
 a {
   margin: 10px;
@@ -15,12 +18,15 @@ a {
 }
 
 .btn-theme-dark {
-  margin: 0 1px;
-  background-color: black;
+  margin: 0 -15px 0 ;
+  background-color: rgb(37, 37, 37);
+  transform: scale(0.7);
 }
 
 .btn-theme-light {
   margin: 0 1px;
+  transform: scale(0.7);
+  background-color: #cfcfcf;
 }
 
 /*===== container navbar and links ===========================================================================*/
@@ -28,7 +34,7 @@ a {
 .navigation {
   display: flex;
   justify-content: space-between;
-  margin: 30px 0;
+  margin-top: 30px;
   padding: 2px;
   font-size: 1.2rem;
   font-weight: 522;
@@ -40,6 +46,11 @@ a {
   color: white;
   background-color: rgb(37, 37, 37);
   border: 1px solid rgb(37, 37, 37);
+}
+
+.nav-active-home {
+  background-color: rgb(37, 37, 37);
+  color: white;
 }
 
 .nav-active-home::after {
@@ -54,10 +65,6 @@ a {
   border-radius: 1px;
 }
 
-.nav-active-home {
-  background-color: rgb(37, 37, 37);
-  color: white;
-}
 
 .navLink {
   text-decoration: none;
@@ -91,34 +98,45 @@ a {
   justify-items: flex-end;
   text-align: justify;
   border: 1px solid black;
-  margin: 20px;
   box-sizing: border-box;
-  box-shadow: 2px 2px 3px 1px #c0c0c0;
-  transition: 1s;
+  box-shadow: 1px 1px 3px 1px #c0c0c0, -1px -1px 3px 1px #c0c0c0;  
+  transition: 0.3s;
+  transform: scale(0.85);
+}
+.containerCardStar::after {
+  content: '⭐';
+  position: absolute;
+  top: 2px;
+  right: 5px;
+ font-size: 3rem;
 }
 
 .containerCard:hover {
   cursor: pointer;
-  box-shadow: 5px 5px 3px 1px #c0c0c0;
-  transform: scale(1.03);
+  box-shadow: 1px 1px 3px 1px #c0c0c0; 
+  transform: scale(0.86);
 
 }
 
-img {
-  
-  transition: 1s;
-}
-img:hover {
-  margin-bottom: 5px;
-  transform: scale(1.01);
-}
 
-.titleCard, .releaseCard {
+.titleCard {
+  height: 20%;
+  margin: 0;
+  color: white;
   text-align: center;
+  background-color: rgb(85, 85, 85);
+}
+.releaseCard {
+  height: 2em;
+  margin: 0;
+  color: white;
+  text-align: center;
+  background-color: rgb(85, 85, 85);
 }
 
 .overviewCard {
   height: 100%;
+  padding-top: 10px;
   margin: 0;
   font-size: 0.8rem;
   padding: 0 10px;
@@ -126,5 +144,21 @@ img:hover {
   color: white;
   /* align-self:flex-end; */
 }
+
+.btnFavorite {
+  position: relative;  
+  background-color: #efefef;
+}
+.btnFavorite:hover {  
+  background-color: rgb(37, 37, 37);
+  color: white;
+}
+.btnClearFavorite {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
 
 /*=====  ==========================================================================*/
