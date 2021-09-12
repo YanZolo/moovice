@@ -10,7 +10,7 @@ class Popular extends Component {
             movies: [],
             favorites: JSON.parse(localStorage.getItem('favorite')) || [],
             isInFavorite: false,
-            componentUnmount: false
+            componentMount: false
         }
     }
 

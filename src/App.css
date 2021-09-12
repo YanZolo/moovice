@@ -70,6 +70,11 @@ a {
   text-decoration: none;
   color: black;
 }
+.navLink:hover {
+text-shadow: 2px 2px 5px  rgb(165, 165, 165);
+color: black;
+}
+
 
 .nav-active::after {
   content: '';
@@ -102,6 +107,7 @@ a {
   box-shadow: 1px 1px 3px 1px #c0c0c0, -1px -1px 3px 1px #c0c0c0;  
   transition: 0.3s;
   transform: scale(0.85);
+  border-radius: 5px;
 }
 .containerCardStar::after {
   content: '⭐';
@@ -127,7 +133,7 @@ a {
   background-color: rgb(85, 85, 85);
 }
 .releaseCard {
-  height: 2em;
+  height: 2rem;
   margin: 0;
   color: white;
   text-align: center;
@@ -154,8 +160,13 @@ a {
   color: white;
 }
 .btnClearFavorite {
+  margin-top: 1rem;
   margin-left: 50%;
   transform: translateX(-50%);
+  border-radius: 5px;
+}
+.btnClearFavorite:hover {
+  background-color: rgb(212, 69, 98);
 }
 
 

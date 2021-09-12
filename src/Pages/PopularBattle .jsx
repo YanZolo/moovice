@@ -33,7 +33,7 @@ class PopularBattle extends Component {
 
     render() {
         
-        console.log(this.state.favorites, localStorage.getItem("favorites"));
+        console.log('local storage key:"favorites"',this.state.favorites, localStorage.getItem("favorites"));
         const currentBattle = this.state.currentBattle
         const duelMovie = this.state.movies.slice(currentBattle, currentBattle + 2)
         
